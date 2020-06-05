@@ -1,37 +1,43 @@
-## Welcome to GitHub Pages
+# Project Overview
 
-You can use the [editor on GitHub](https://github.com/vtran42/vtran42.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+The project focused on policy-aware data centers, wherein virtual machine traffic traverses in either ordered or unordered.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+- Ordered: when the packets travel from virtual machine to virtual machine pair, it must go through middle boxes such as firewall, load balancer, and cache proxy in order.
+- Unordered: when the packets travel from virtual machine to virtual machine pair, it is not neccessary travel in order between middle boxes.
 
-### Markdown
+In the project, we proposed two new virtual machine placement and migration problems in ordered and unordered policy-aware:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- Policy-aware virtual machine placement where virtual machines are placement in the data center in such away to give total communication cost between virtual machine and machine pair is minimum.
+- Policy-aware virtual machine migration is the arrangement of virtual machines when the communication frequecies of each pair virtual machine changing. Thus, it is dynamically communicating traffic in cloud data center.
 
-```markdown
-Syntax highlighted code block
+When we place or migrate the virtual machine pair, resources capacity of each Physical machine in data center is satisfied. Moreover, the algorithms in the paper are applicable for any data center architecture, cost when packets travel between switches, physical machines and switches.
 
-# Header 1
-## Header 2
-### Header 3
+# How to Run
 
-- Bulleted
-- List
+We use fat tree topology as a data center architecture in simulation. The number of PODs can be from 2 to 30.
 
-1. Numbered
-2. List
+The project is implemented in Java with graph-stream as an external library. You can download complete graph-stream library as <http://graphstream-project.org/>
 
-**Bold** and _Italic_ and `Code` text
+1. Download the packages from graph-stream website
+2. Unzip the file download, and add the .jar file into your project as an external library in your choice IDE. In our demo, we use IntelJ.
+3. Download or clone our code into your project directory and run the test.java file.
 
-[Link](url) and ![Image](src)
-```
+Demo:
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+1. Download and extract packages from graph-stream
+2. Add the .jar file into the project
+3. download, add source code, and run the simulation
 
-### Jekyll Themes
+# Publication
+PAM & PAL: Policy-Aware Virtual Machine Migration and Placement in Dynamic Cloud Data Centers, IEEE International Conference on Computer Communications (Infocom 2020).
+The paper can be downloaded here.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/vtran42/vtran42.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+# Researchers
 
-### Support or Contact
+1. Hugo Flores
+2. Vincent Tran
+3. <a href="http://csc.csudh.edu/btang/"> Dr. Bin Tang </a>
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+# Acknowledgements
+
+The project is sponsored by NSF Grant CNS-1911191.
