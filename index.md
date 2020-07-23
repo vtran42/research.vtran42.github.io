@@ -35,7 +35,7 @@ The paper can be downloaded here.
 # Researchers
 
 1. Hugo Flores
-2. Vincent Tran
+2. <a href = "https://github.com/vtran42"> Vincent Tran </a>
 3. <a href="http://csc.csudh.edu/btang/"> Dr. Bin Tang </a>
 
 # Acknowledgements
